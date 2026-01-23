@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UDP")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e0a2c966cfc81e21de39bb3d376158082771c60f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c06703d8e880ab6ee9c8c5bb842a6f786e28ccd8")]
 [assembly: System.Reflection.AssemblyProductAttribute("UDP")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UDP")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
+using UDPClient;
 class Program
 {
     const int ButtonPin = 27;
     static DateTime _lastPress = DateTime.MinValue;
-    static readonly TimeSpan DebounceTime = TimeSpan.FromMilliseconds(500);
+    static readonly TimeSpan DebounceTime = TimeSpan.FromMilliseconds(120000);
 
     static void Main()
     {
         Console.WriteLine("C# GPIO service started");
 
         using var gpio = new GpioController();
-
+        
         // Input mode only
         gpio.OpenPin(ButtonPin, PinMode.Input);
 
@@ -44,6 +44,8 @@ class Program
 
         // Run the script async
         _ = RunScriptAsync();
+        UDPClient.Client.SendStartMessage();
+
     }
 
     static async Task RunScriptAsync()
