@@ -10,16 +10,35 @@ class Client
 {
     public static void SendStartMessage()
     {
-        int i = Random.Shared.Next(1112, 12000);
+        try
+        {
+            int i = Random.Shared.Next(1112, 12000);
 
-        UdpClient udp = new UdpClient(i);
-        IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse("192.168.64.185"), 1111);
-        string message = "Start";
-        byte[] StartMessage = Encoding.UTF8.GetBytes(message);
+            using var udp = new UdpClient(i);
 
-        udp.Send(StartMessage, StartMessage.Length, serverEP);
+            string serverIp = Environment.GetEnvironmentVariable("DEFQON_SERVER_IP");
 
-        udp.Close();
+            if (string.IsNullOrEmpty(serverIp))
+            {
+                Console.WriteLine("ERROR: DEFQON_SERVER_IP not set!");
+                return;
+            }
+
+            Console.WriteLine($"Sending UDP to {serverIp}:1111");
+
+            IPEndPoint serverEP = new IPEndPoint(IPAddress.Parse(serverIp), 1111);
+
+            string message = "Start";
+            byte[] data = Encoding.UTF8.GetBytes(message);
+
+            udp.Send(data, data.Length, serverEP);
+
+            Console.WriteLine("UDP packet sent successfully");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"UDP send failed: {ex}");
+        }
     }
 
 }

@@ -1,0 +1,6 @@
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/UDP
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/UDP.dll
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/UDP.deps.json
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/UDP.runtimeconfig.json
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/UDP.pdb
+/home/stage/defqon_ws/Defqon/Services/UDP/publish/System.Device.Gpio.dll

@@ -1,0 +1,6 @@
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/UDP
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/UDP.dll
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/UDP.deps.json
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/UDP.runtimeconfig.json
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/UDP.pdb
+/home/stage/defqon_ws/Defqon/Services/UDP/bin/Release/net8.0/publish/System.Device.Gpio.dll
