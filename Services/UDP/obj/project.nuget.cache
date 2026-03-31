@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1cK1oFLWV2wCW386Fk/HQ9J3Li0O++YM+8N4RkgPS6P5lKPT4PLieaUe+bGpDhrKz7++hZOEhfHHxdSXrU9QhA==",
+  "success": true,
+  "projectFilePath": "/home/stage/defqon_ws/Defqon/Services/UDP/UDP.csproj",
+  "expectedPackageFiles": [
+    "/home/stage/.nuget/packages/system.device.gpio/4.1.0/system.device.gpio.4.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

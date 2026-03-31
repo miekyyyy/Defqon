@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "System.Device.Gpio/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/System.Device.Gpio.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/System.Device.Gpio.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "System.Device.Gpio/4.1.0": {
+      "sha512": "Ip7o1kJ8B/UL5+7/21treDxue2/5Is6bfC3KWEBEYX5LH8jvRiypL1Muoe4HdEHa728Ge6t+5PZ7x02ibPp5Jg==",
+      "type": "package",
+      "path": "system.device.gpio/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/System.Device.Gpio.dll",
+        "lib/net8.0/System.Device.Gpio.pdb",
+        "lib/net8.0/System.Device.Gpio.xml",
+        "system.device.gpio.4.1.0.nupkg.sha512",
+        "system.device.gpio.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "System.Device.Gpio >= 4.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/stage/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/stage/defqon_ws/Defqon/Services/UDP/UDP.csproj",
+      "projectName": "UDP",
+      "projectPath": "/home/stage/defqon_ws/Defqon/Services/UDP/UDP.csproj",
+      "packagesPath": "/home/stage/.nuget/packages/",
+      "outputPath": "/home/stage/defqon_ws/Defqon/Services/UDP/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/stage/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "System.Device.Gpio": {
+            "target": "Package",
+            "version": "[4.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
