@@ -1,0 +1,113 @@
+{
+  "$type": "System.Collections.Generic.List`1[[DefqonEngine.Common.TimelineEvent, DefqonEngine]], mscorlib",
+  "$values": [
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 1.68992436,
+      "duration": 1.0,
+      "trackIndex": 0,
+      "targetId": 0,
+      "type": "Light"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 3.68040538,
+      "duration": 4.659038,
+      "trackIndex": 0,
+      "targetId": 0,
+      "type": "Light"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 9.848713,
+      "duration": 9.471189,
+      "trackIndex": 0,
+      "targetId": 0,
+      "type": "Light"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 2.67422843,
+      "duration": 1.0,
+      "trackIndex": 1,
+      "targetId": 0,
+      "type": "Light"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 8.426938,
+      "duration": 1.0,
+      "trackIndex": 2,
+      "targetId": 0,
+      "type": "Light"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.LightEvent, DefqonEngine",
+      "lightEffectType": "Static",
+      "color": {
+        "$type": "DefqonEngine.Common.Data.SerializableColor, DefqonEngine",
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+      },
+      "fadeCurve": "Linear",
+      "inverted": false,
+      "time": 8.9519,
+      "duration": 1.30622578,
+      "trackIndex": 3,
+      "targetId": 2,
+      "type": "Light"
+    }
+  ]
+}
