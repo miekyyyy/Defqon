@@ -2,6 +2,9 @@
 #include <Adafruit_NeoPixel.h>
 #define PIN 13 // Pin connected to DIN
 #define NUM_PIXELS 9 // Number of LEDs in the strip
+
+String aa;
+
 Adafruit_NeoPixel strip(NUM_PIXELS, PIN, NEO_GRB + NEO_KHZ800);
 void setup() {
    strip.begin();
