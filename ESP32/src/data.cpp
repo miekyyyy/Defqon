@@ -3,8 +3,11 @@
 
 class EventData
 {
-    private:
-        // Parsed variables
+    public:
+        // temporary storage of the string after its been split
+        std::vector<String> tempStorage;
+
+        // variables
         String type;
         int targetId;
         String lightEffectType;
@@ -15,9 +18,7 @@ class EventData
         float colorA;
         float duration;
 
-    public:
-        std::vector<String> tempStorage;
-        
+        // sets the variables to a parsed light effect
         void parseLightEffect()
         {  
             if (tempStorage.size() >= 9)
@@ -34,6 +35,7 @@ class EventData
             }
         }
 
+        // sets the variables to a parsed smoke effect
         void parseSmokeEffect()
         {  
             if (tempStorage.size() >= 3)
@@ -45,10 +47,11 @@ class EventData
         }
 
         // Constructor that parses the send string
-        EventData(String& data)
+        EventData(String data)
         {
             String tempData;
             int index = 0;
+            // splits string at ","
             while(data.indexOf(',') != -1)
             {
                 tempData = data.substring(0, data.indexOf(','));
@@ -57,6 +60,7 @@ class EventData
                 index++; 
             }
 
+            // temporary data is the current split string and then pushes it in the list
             tempData = data;
             tempStorage.push_back(tempData);
 

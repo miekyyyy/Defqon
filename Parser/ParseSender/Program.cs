@@ -56,6 +56,7 @@ class Program
             // Open serial port
             using var serial = new SerialPort("/dev/ttyACM0", 115200);
             serial.Open();
+            Thread.Sleep(5000); // ← VERY IMPORTANT
             Console.WriteLine("Serial port opened. Starting event playback");
 
             // Start stopwatch

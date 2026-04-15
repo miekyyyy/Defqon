@@ -29,10 +29,18 @@
     },
     {
       "$type": "DefqonEngine.Lighting.Data.SmokeEvent, DefqonEngine",
-      "time": 9.264829,
+      "time": 12.264829,
       "duration": 3.09964657,
       "trackIndex": 0,
       "targetId": 0,
+      "type": "Smoke"
+    },
+    {
+      "$type": "DefqonEngine.Lighting.Data.SmokeEvent, DefqonEngine",
+      "time": 13.264829,
+      "duration": 7.09964657,
+      "trackIndex": 0,
+      "targetId": 2,
       "type": "Smoke"
     }
   ]
