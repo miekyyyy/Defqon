@@ -1,21 +1,46 @@
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
-#define PIN 13 // Pin connected to DIN
-#define NUM_PIXELS 9 // Number of LEDs in the strip
+#include "data.cpp"
+#include "effects.cpp"
+
+#define PIN 13
+#define NUM_PIXELS 9
+
+// string that will be filled with the received string
+String incomingString = "";
+
+// initialize lights and effects
 Adafruit_NeoPixel strip(NUM_PIXELS, PIN, NEO_GRB + NEO_KHZ800);
+Effects effects;
+
 void setup() {
-   strip.begin();
-   strip.show(); // Initialize all pixels to 'off'
    Serial.begin(115200);
 }
+
 void loop() {
-   for (int i = 0; i < NUM_PIXELS; i++) {
-       strip.setPixelColor(i, strip.Color(255, 0, 0)); // Red color
-       strip.show();
-       delay(100);
+
+   // Update effects
+   effects.Update();
+
+   // if there is something coming in on the serial port
+   if (Serial.available() > 0)
+   {
+      // the string that came in on the serial port
+      String incomingString = Serial.readStringUntil('\n');
+
+      // send the string to be split
+      EventData eventData(incomingString);
+      
+      // the split string used for light effects
+      if (eventData.type == "Light")
+      {
+        
+      }
+
+      // the split string used for smoke effects
+      else if (eventData.type == "Smoke")
+      {
+         effects.SmokeOn(eventData.targetId, eventData.duration);
+      }
    }
-   delay(1000);
-   strip.clear();
-   strip.show();
-   delay(1000);
 }

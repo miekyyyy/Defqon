@@ -12,9 +12,10 @@ class Program
     // Event classes
     class Event
     {
-        public string? type { get; set; }          // nullable
+        public string type { get; set; }
         public int targetId { get; set; }
         public string? lightEffectType { get; set; } // nullable
+        public bool? inverted { get; set; } // nullable
         public Color? color { get; set; }          // nullable
         public float duration { get; set; }
         public float time { get; set; }
@@ -33,7 +34,6 @@ class Program
         [JsonPropertyName("$values")]
         public Event[]? Values { get; set; }       // nullable
     }
-
 
     // Main program
     static void Main()
@@ -56,6 +56,7 @@ class Program
             // Open serial port
             using var serial = new SerialPort("/dev/ttyACM0", 115200);
             serial.Open();
+            Thread.Sleep(5000); // ← VERY IMPORTANT
             Console.WriteLine("Serial port opened. Starting event playback");
 
             // Start stopwatch
@@ -68,10 +69,24 @@ class Program
                 while (stopwatch.Elapsed.TotalSeconds < evt.time)
                     Thread.Sleep(1); // sleep 1 ms to avoid busy waiting
 
-                // Build string
-                string toSend = $"{evt.type},{evt.targetId},{evt.lightEffectType}," +
-                                $"{evt.color.r},{evt.color.g},{evt.color.b},{evt.color.a}," +
-                                $"{evt.duration}\n";
+                // Build string 
+                string toSend;
+                if (evt.type == "Light")
+                {
+                    toSend =
+                        $"{evt.type},{evt.targetId},{evt.lightEffectType},{(evt.inverted == true ? "1" : "0")}," +
+                        $"{evt.color?.r ?? 0},{evt.color?.g ?? 0},{evt.color?.b ?? 0},{evt.color?.a ?? 0}," +
+                        $"{evt.duration}\n";
+                }
+                else if (evt.type == "Smoke")
+                {
+                    toSend =
+                        $"{evt.type},{evt.targetId},{evt.duration}\n";
+                }
+                else
+                {
+                    continue; // unknown event type
+                }
 
                 // Send to ESP32
                 serial.Write(toSend);
